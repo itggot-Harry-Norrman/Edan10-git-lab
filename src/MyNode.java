@@ -7,6 +7,11 @@ package tree;
 //calvin doing a thing finally
 //calvin trying to break long transaction
 
+//calvin squash 1
+//calvin squash 2
+//calvin squash 3
+
+
 /**
  * This is a node in a binary search tree. The node holds an integer value.
  *
