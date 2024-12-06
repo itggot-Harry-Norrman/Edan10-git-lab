@@ -1,4 +1,4 @@
-//calvin is the best
+//no hobbes is best
 package tree;
 
 //calvin doing a thing finally
@@ -105,13 +105,13 @@ public class MyNode {
    */
   public int calcSize() {
     int cnt = 1;
-    if(left != null) {
+    if (left != null) {
       cnt += left.calcSize();
     }
-    if(right != null) {
+    if (right != null) {
       cnt += right.calcSize();
     }
     return cnt;
   }
-  //Hobbes change
-} 
+  // Hobbes change
+}
