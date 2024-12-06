@@ -1,5 +1,7 @@
 package tree;
 
+// Hobbes change
+
 import tree.MyNode;
 
 /**
@@ -27,39 +29,35 @@ public class MyTree {
   }
 
   /**
-   * Inserts a node in this tree. The tree is sorted by the node values.  If a
+   * Inserts a node in this tree. The tree is sorted by the node values. If a
    * node with the same node value is already in the tree nothing happens.
    *
    * @param node The node to insert in this tree.
    * @return True if node is inserted, false otherwise.
    */
   public boolean insert(MyNode node) {
-    if(root == null) {
+    if (root == null) {
       root = node;
       return true;
     }
     MyNode iter = root;
 
-    while(true) {
-      if(iter.getValue() < node.getValue()) {
-        if(iter.getRightChild() != null) {
+    while (true) {
+      if (iter.getValue() < node.getValue()) {
+        if (iter.getRightChild() != null) {
           iter = iter.getRightChild();
-        }
-        else {
+        } else {
           iter.setRightChild(node);
           return true;
         }
-      }
-      else if(iter.getValue() > node.getValue()) {
-        if(iter.getLeftChild() != null) {
+      } else if (iter.getValue() > node.getValue()) {
+        if (iter.getLeftChild() != null) {
           iter = iter.getLeftChild();
-        }
-        else {
+        } else {
           iter.setLeftChild(node);
           return true;
         }
-      }
-      else if(iter.getValue() == node.getValue()) {
+      } else if (iter.getValue() == node.getValue()) {
         return false;
       }
     }
@@ -72,10 +70,9 @@ public class MyTree {
    * @return The total number of nodes.
    */
   public int cardinal() {
-    if(root == null) {
+    if (root == null) {
       return 0;
     }
     return root.calcSize();
   }
 }
-
